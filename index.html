@@ -19,10 +19,7 @@
                     style ="margin-top: -50px; height: calc(100% + 50px);" />
         </div>
     </body>
-    <script>
-      var fullPath = "https://script.google.com/macros/s/AKfycbxy57TqMhV3K7WJ1vQGuZl8rTiN8uHnAvpKtVdFiepPetfPQw4/exec?page=" + getUrlVars()["page"];
-      document.getElementById('frame').setAttribute("src", fullPath)
-        
+    <script>          
     function getUrlVars() {
       var vars = {};
       var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
@@ -32,5 +29,7 @@
       return vars;
     }
         
+      var fullPath = "https://script.google.com/macros/s/AKfycbxy57TqMhV3K7WJ1vQGuZl8rTiN8uHnAvpKtVdFiepPetfPQw4/exec?page=" + getUrlVars()["page"];
+      document.getElementById('frame').setAttribute("src", fullPath)
     </script>
 </html>
