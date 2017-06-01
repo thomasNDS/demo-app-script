@@ -27,8 +27,8 @@
       var fullPath = "https://script.google.com/macros/s/AKfycbxy57TqMhV3K7WJ1vQGuZl8rTiN8uHnAvpKtVdFiepPetfPQw4/exec?page=" + getUrlVars()["page"];
       if(document.getElementById('frame'))
           document.getElementById('frame').src = fullPath
+            document.getElementById('frame').contentWindow.location.reload();
         }
-          loadIframe()
           window.onload = loadIframe()
        </script>
     </head>
