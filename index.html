@@ -14,8 +14,12 @@
     </head>
     <body>
         <div id="content">
-            <iframe width="100%" height="100%" frameborder="0" 
+            <iframe id="frame" width="100%" height="100%" frameborder="0" 
                     src="https://script.google.com/macros/s/AKfycbxy57TqMhV3K7WJ1vQGuZl8rTiN8uHnAvpKtVdFiepPetfPQw4/exec?page=form" />
         </div>
     </body>
+    <script>
+      var fullPath = "https://script.google.com/macros/s/AKfycbxy57TqMhV3K7WJ1vQGuZl8rTiN8uHnAvpKtVdFiepPetfPQw4/exec?page=form"
+      top.document.getElementById('frame').setAttribute("src",fullPath)
+    </script>
 </html>
