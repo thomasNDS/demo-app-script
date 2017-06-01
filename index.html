@@ -25,7 +25,8 @@
     }
         
       var fullPath = "https://script.google.com/macros/s/AKfycbxy57TqMhV3K7WJ1vQGuZl8rTiN8uHnAvpKtVdFiepPetfPQw4/exec?page=" + getUrlVars()["page"];
-      document.getElementById('frame').src = fullPath
+      if(document.getElementById('frame'))
+          document.getElementById('frame').src = fullPath
         }
           window.onshow = loadIframe()
           window.onload = loadIframe()
