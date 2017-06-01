@@ -14,12 +14,11 @@
     </head>
     <body>
         <div id="content">
-            <iframe id="frame" width="100%" frameborder="0" 
-                    src="https://script.google.com/macros/s/AKfycbxy57TqMhV3K7WJ1vQGuZl8rTiN8uHnAvpKtVdFiepPetfPQw4/exec?page=form" 
-                    style ="margin-top: -50px; height: calc(100% + 50px);" />
+            <iframe id="frame" width="100%" frameborder="0" style ="margin-top: -50px; height: calc(100% + 50px);" />
         </div>
     </body>
-    <script>          
+    <script>
+        window.onload = function(){
     function getUrlVars() {
       var vars = {};
       var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
@@ -31,5 +30,6 @@
         
       var fullPath = "https://script.google.com/macros/s/AKfycbxy57TqMhV3K7WJ1vQGuZl8rTiN8uHnAvpKtVdFiepPetfPQw4/exec?page=" + getUrlVars()["page"];
       document.getElementById('frame').setAttribute("src", fullPath)
+        }
     </script>
 </html>
