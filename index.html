@@ -19,7 +19,17 @@
         </div>
     </body>
     <script>
-      var fullPath = "https://script.google.com/macros/s/AKfycbxy57TqMhV3K7WJ1vQGuZl8rTiN8uHnAvpKtVdFiepPetfPQw4/exec?page=form"
-      top.document.getElementById('frame').setAttribute("src",fullPath)
+      var fullPath = "https://script.google.com/macros/s/AKfycbxy57TqMhV3K7WJ1vQGuZl8rTiN8uHnAvpKtVdFiepPetfPQw4/exec?page=" + getUrlVars()["page"];
+      document.getElementById('frame').setAttribute("src", fullPath)
+        
+    function getUrlVars() {
+      var vars = {};
+      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+      function(m,key,value) {
+        vars[key] = value;
+      });
+      return vars;
+    }
+        
     </script>
 </html>
